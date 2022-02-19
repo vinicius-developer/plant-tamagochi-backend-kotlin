@@ -35,7 +35,7 @@ class Mqtt {
     @Bean
     @ServiceActivator(inputChannel = "mqttInputChannel")
     fun handler(): MessageHandler {
-        return ReceiveMqttMessages()
+        return ReceiveMqttMessagesAdapter()
     }
 
 }

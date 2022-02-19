@@ -4,7 +4,7 @@ import org.springframework.messaging.Message
 import org.springframework.messaging.MessageHandler
 import org.springframework.messaging.MessagingException
 
-class ReceiveMqttMessages: MessageHandler {
+class ReceiveMqttMessagesAdapter: MessageHandler {
 
     @Throws(MessagingException::class)
     override fun handleMessage(message: Message<*>) {
