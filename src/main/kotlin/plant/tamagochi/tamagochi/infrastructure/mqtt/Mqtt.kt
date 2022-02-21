@@ -9,6 +9,7 @@ import org.springframework.integration.mqtt.inbound.MqttPahoMessageDrivenChannel
 import org.springframework.integration.mqtt.support.DefaultPahoMessageConverter
 import org.springframework.messaging.MessageChannel
 import org.springframework.messaging.MessageHandler
+import plant.tamagochi.tamagochi.infrastructure.json.JsonMqttJacksonAdapter
 
 @Configuration
 class Mqtt {
