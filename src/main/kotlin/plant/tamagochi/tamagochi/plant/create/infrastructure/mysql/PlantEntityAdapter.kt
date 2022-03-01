@@ -1,17 +1,17 @@
-package plant.tamagochi.tamagochi.infrastructure.database.plant
+package plant.tamagochi.tamagochi.plant.create.infrastructure.mysql
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import plant.tamagochi.tamagochi.domain.Plant
-import plant.tamagochi.tamagochi.port.database.SavePlant
+import plant.tamagochi.tamagochi.plant.create.domain.Plant
+import plant.tamagochi.tamagochi.plant.create.usecase.PlantStorage
 
 @Service
-class PlantEntityAdapter (): SavePlant {
+class PlantEntityAdapter(): PlantStorage {
 
     @Autowired
     private lateinit var plantEntityRepository: PlantEntityRepository
 
-    override fun save(plant: Plant): Unit {
+    override fun storage(plant: Plant): Unit {
 
         val entity: PlantEntity = PlantEntity(plant)
 

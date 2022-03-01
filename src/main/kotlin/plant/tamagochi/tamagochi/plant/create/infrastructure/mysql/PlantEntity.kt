@@ -1,10 +1,9 @@
-package plant.tamagochi.tamagochi.infrastructure.database.plant
+package plant.tamagochi.tamagochi.plant.create.infrastructure.mysql
 
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.plant.create.domain.Plant
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
-import java.util.*
 import javax.persistence.*
 
 @Entity
@@ -33,11 +32,11 @@ open class PlantEntity() {
     private var createAt: String? = null
 
     constructor(plant: Plant) : this() {
-        this.uuid = plant.getUUID().toString()
-        this.isRain = plant.getIsRain()
-        this.moistureAir = plant.getMoistureAir()
-        this.moistureSoil = plant.getMoistureSoil()
-        this.temperature = plant.getTemperature()
+        this.uuid = plant.uuid.toString()
+        this.isRain = plant.isRain
+        this.moistureAir = plant.moistureAir
+        this.moistureSoil = plant.moistureSoil
+        this.temperature = plant.temperature
         this.createAt = DateTimeFormatter
             .ofPattern("yyyy-MM-dd HH:mm:ss")
             .withZone(ZoneOffset.UTC)
