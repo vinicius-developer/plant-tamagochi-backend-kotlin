@@ -1,16 +1,16 @@
 package plant.tamagochi.tamagochi.plant.create.usecase
 
-import plant.tamagochi.tamagochi.plant.create.domain.Plant
+import plant.tamagochi.tamagochi.plant.create.domain.PlantToPersist
 
 class CreateNewPlant {
 
     fun processInformation(
         input: PlantInput, output: PlantOutput
-    ) {
+    ):PlantToPersist {
 
-        val plant: Plant = input.getPlant()
+        val plant: PlantToPersist = input.getPlant()
 
-        output.savePlant(plant)
+        return output.savePlant(plant)
 
     }
 

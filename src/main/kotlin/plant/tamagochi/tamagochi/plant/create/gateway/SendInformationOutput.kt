@@ -1,15 +1,15 @@
 package plant.tamagochi.tamagochi.plant.create.gateway
 
-import plant.tamagochi.tamagochi.plant.create.domain.Plant
+import plant.tamagochi.tamagochi.plant.create.domain.PlantToPersist
 import plant.tamagochi.tamagochi.plant.create.usecase.PlantOutput
 import plant.tamagochi.tamagochi.plant.create.usecase.PlantStorage
 
 class SendInformationOutput(
-    val persistence: PlantStorage
+    private val persistence: PlantStorage
 ): PlantOutput {
 
-    override fun savePlant(plant: Plant) {
-        persistence.storage(plant)
+    override fun savePlant(plant: PlantToPersist): PlantToPersist {
+        return persistence.storage(plant)
     }
 
 }

@@ -1,4 +1,4 @@
-package plant.tamagochi.tamagochi.infrastructure.mqtt.comunicateLenguage
+package plant.tamagochi.tamagochi.plant.create.infrastructure.mqtt.comunicateLenguage
 
 interface ComunicateLenguage {
 

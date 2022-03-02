@@ -1,6 +1,6 @@
 package plant.tamagochi.tamagochi.plant.create.gateway
 
-import plant.tamagochi.tamagochi.plant.create.domain.Plant
+import plant.tamagochi.tamagochi.plant.create.domain.PlantToPersist
 import plant.tamagochi.tamagochi.plant.create.usecase.PlantInput
 import java.util.*
 
@@ -12,8 +12,8 @@ class ReceiveInformation(
     private val moistureSoil: Int
 ): PlantInput {
 
-    override fun getPlant(): Plant {
-        return Plant(
+    override fun getPlant(): PlantToPersist {
+        return PlantToPersist(
             this.uuid,
             this.temperature,
             this.isRain,
