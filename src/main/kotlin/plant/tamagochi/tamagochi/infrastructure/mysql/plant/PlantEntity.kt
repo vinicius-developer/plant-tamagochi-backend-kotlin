@@ -1,6 +1,6 @@
-package plant.tamagochi.tamagochi.plant.create.infrastructure.mysql
+package plant.tamagochi.tamagochi.infrastructure.mysql.plant
 
-import plant.tamagochi.tamagochi.plant.create.domain.Plant
+import plant.tamagochi.tamagochi.domain.Plant
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
@@ -11,11 +11,9 @@ import javax.persistence.*
 open class PlantEntity() {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private var id: Long? = null
-
     @Column(nullable = false)
-    private var uuid: String? = null
+    var uuid: String? = null
+        private set
 
     @Column(name = "is_rain")
     private var isRain: Boolean? = null

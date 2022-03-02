@@ -1,4 +1,4 @@
-package plant.tamagochi.tamagochi.plant.create.infrastructure.mqtt
+package plant.tamagochi.tamagochi.infrastructure.mqtt
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
