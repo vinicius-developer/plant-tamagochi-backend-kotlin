@@ -4,6 +4,6 @@ import plant.tamagochi.tamagochi.owner.plants.domain.Owner
 
 interface OwnerStorage {
 
-    fun getListOfPlants(): List<Owner>
+    fun getListOfPlants(id: Long): List<Owner>
 
 }

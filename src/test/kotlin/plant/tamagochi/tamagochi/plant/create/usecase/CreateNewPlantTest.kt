@@ -2,8 +2,9 @@ package plant.tamagochi.tamagochi.plant.create.usecase
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import plant.tamagochi.tamagochi.plant.create.domain.PlantToPersist
-import plant.tamagochi.tamagochi.plant.create.gateway.ReceiveInformation
+import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.plant.create.domain.PersistPlantBuilder
+import plant.tamagochi.tamagochi.plant.create.gateway.InformationInputDataProvider
 import java.util.*
 
 internal class CreateNewPlantTest {
@@ -11,7 +12,7 @@ internal class CreateNewPlantTest {
     @Test
     fun testsCreateNewPlant() {
 
-        val input: PlantInput = ReceiveInformation(
+        val input: PlantInput = InformationInputDataProvider(
             UUID.fromString("a15ace80-8d20-11ec-b909-0242ac121015"),
             25,
             false,
@@ -20,12 +21,12 @@ internal class CreateNewPlantTest {
         )
 
         val output: PlantOutput = object : PlantOutput {
-            override fun savePlant(plant: PlantToPersist): PlantToPersist {
-                return plant
+            override fun savePlant(persistPlantBuilder: PersistPlantBuilder): Plant {
+                return persistPlantBuilder.plant
             }
         }
 
-        val plant: PlantToPersist = CreateNewPlant().processInformation(input, output)
+        val plant: Plant = CreateNewPlant().processInformation(input, output)
 
         assertEquals(plant.isRain, false)
         assertEquals(plant.temperature, 25)

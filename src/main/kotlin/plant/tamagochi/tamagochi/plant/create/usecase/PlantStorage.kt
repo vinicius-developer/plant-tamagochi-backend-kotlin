@@ -1,9 +1,9 @@
 package plant.tamagochi.tamagochi.plant.create.usecase
 
-import plant.tamagochi.tamagochi.plant.create.domain.PlantToPersist
+import plant.tamagochi.tamagochi.domain.Plant
 
 interface PlantStorage {
 
-    fun storage(plant: PlantToPersist): PlantToPersist
+    fun storage(plant: Plant): Plant
 
 }

@@ -1,9 +1,10 @@
 package plant.tamagochi.tamagochi.plant.create.usecase
 
-import plant.tamagochi.tamagochi.plant.create.domain.PlantToPersist
+import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.plant.create.domain.PersistPlantBuilder
 
 interface PlantOutput {
 
-    fun savePlant(plant: PlantToPersist): PlantToPersist
+    fun savePlant(persistPlantBuilder: PersistPlantBuilder): Plant
 
 }

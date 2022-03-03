@@ -2,7 +2,7 @@ package plant.tamagochi.tamagochi.domain
 
 import java.util.UUID
 
-abstract class Plant(
+data class Plant(
     val uuid: UUID,
     val temperature: Byte,
     val isRain: Boolean,

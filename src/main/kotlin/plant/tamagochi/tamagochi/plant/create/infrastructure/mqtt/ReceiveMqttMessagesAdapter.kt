@@ -2,7 +2,7 @@ package plant.tamagochi.tamagochi.plant.create.infrastructure.mqtt
 
 import com.fasterxml.jackson.databind.JsonMappingException
 import org.springframework.beans.factory.annotation.Autowired
-import plant.tamagochi.tamagochi.plant.create.gateway.ReceiveInformation
+import plant.tamagochi.tamagochi.plant.create.gateway.InformationInputDataProvider
 import plant.tamagochi.tamagochi.plant.create.gateway.SendInformationOutput
 import plant.tamagochi.tamagochi.plant.create.usecase.CreateNewPlant
 import plant.tamagochi.tamagochi.plant.create.usecase.PlantInput
@@ -28,7 +28,7 @@ class ReceiveMqttMessagesAdapter(): MessageHandler {
             = this.transformInPlantDtoRegister(message.payload.toString())
             ?: throw JsonMappingException("Json is invalid")
 
-        val input: PlantInput = ReceiveInformation(
+        val input: PlantInput = InformationInputDataProvider(
             UUID.fromString(readableInformation.getValue("uuid")),
             readableInformation.getValue("temperature").toByte(),
             readableInformation.getValue("isRain").toBoolean(),

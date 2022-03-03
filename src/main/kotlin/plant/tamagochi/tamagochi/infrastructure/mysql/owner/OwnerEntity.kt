@@ -12,9 +12,12 @@ open class OwnerEntity() {
     private var id: Long? = null
 
     @Column(name = "uuid_plant")
-    private var uuidPlant: String? = null
+    var uuidPlant: String? = null
+        private set
 
-    private var owner: Long? = null
+    var owner: Long? = null
+        private set
+
 
     constructor(owner: Owner) : this() {
         this.owner = owner.id

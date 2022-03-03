@@ -1,6 +1,6 @@
 package plant.tamagochi.tamagochi.owner.plants.useCase
 
-import plant.tamagochi.tamagochi.owner.plants.domain.OwnerPlant
+import plant.tamagochi.tamagochi.domain.Plant
 
 class GetPlantsOwner {
 
@@ -8,9 +8,9 @@ class GetPlantsOwner {
         input: OwnerInput,
         ownerStorage: OwnerStorage,
         plantStorage: PlantStorage
-    ): List<OwnerPlant> {
+    ): List<Plant> {
 
-
+        TODO("use case for return all plants")
 
     }
 

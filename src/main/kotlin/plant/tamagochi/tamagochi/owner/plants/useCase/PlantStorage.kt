@@ -1,9 +1,9 @@
 package plant.tamagochi.tamagochi.owner.plants.useCase
 
-import plant.tamagochi.tamagochi.owner.plants.domain.OwnerPlant
+import plant.tamagochi.tamagochi.domain.Plant
 
 interface PlantStorage {
 
-    fun getListOfPlants(): List<OwnerPlant>
+    fun getListOfPlants(): List<Plant>
 
 }
