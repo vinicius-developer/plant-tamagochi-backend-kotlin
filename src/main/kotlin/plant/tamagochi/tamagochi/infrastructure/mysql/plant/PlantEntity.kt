@@ -8,34 +8,34 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "plant")
-open class PlantEntity() {
-
+open class PlantEntity private constructor(
     @Id
     @Column(nullable = false)
-    var uuid: String? = null
-        private set
-
+    val uuid: String,
     @Column(name = "is_rain")
-    private var isRain: Boolean? = null
-
+    val isRain: Boolean,
+    val temperature: Byte,
     @Column(name = "moisture_air")
-    private var moistureAir: Int? = null
-
+    val moistureAir: Int,
     @Column(name = "moisture_soil")
-    private var moistureSoil: Int? = null
-
-    private var temperature: Byte? = null
+    val moistureSoil: Int
+) {
 
     @Column(name = "created_at")
-    private var createAt: String? = null
+    private var createAt: String = this.getTimestamp()
 
-    constructor(plant: Plant) : this() {
-        this.uuid = plant.uuid.toString()
-        this.isRain = plant.isRain
-        this.moistureAir = plant.moistureAir
-        this.moistureSoil = plant.moistureSoil
-        this.temperature = plant.temperature
-        this.createAt = DateTimeFormatter
+    constructor(plant: Plant) : this(
+        plant.uuid.toString(),
+        plant.isRain,
+        plant.temperature,
+        plant.moistureAir,
+        plant.moistureSoil
+    ) {
+        this.createAt = this.getTimestamp()
+    }
+
+    private fun getTimestamp(): String {
+        return DateTimeFormatter
             .ofPattern("yyyy-MM-dd HH:mm:ss")
             .withZone(ZoneOffset.UTC)
             .format(Instant.now())
