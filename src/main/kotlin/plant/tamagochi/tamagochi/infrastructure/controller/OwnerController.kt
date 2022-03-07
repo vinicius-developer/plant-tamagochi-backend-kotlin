@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.Plant
 import plant.tamagochi.tamagochi.owner.plants.infrastructre.database.OwnerStorageAdapter
 import plant.tamagochi.tamagochi.owner.plants.infrastructre.database.PlantStorageAdapter
 import plant.tamagochi.tamagochi.owner.plants.useCase.GetPlantsOwner
@@ -31,5 +31,6 @@ class OwnerController(
             this.ownerStorageAdapter,
             this.plantStorageAdapter
         )
+
     }
 }

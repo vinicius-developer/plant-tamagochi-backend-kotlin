@@ -1,6 +1,6 @@
 package plant.tamagochi.tamagochi.owner.plants.domain
 
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.BuilderPlant
 import java.util.*
 
 class OwnerPlantBuilder(
@@ -9,14 +9,11 @@ class OwnerPlantBuilder(
     isRain: Boolean,
     moistureAir: Int,
     moistureSoil: Int
-) {
+): BuilderPlant(
+    uuid,
+    temperature,
+    isRain,
+    moistureAir,
+    moistureSoil
+)
 
-    val plant: Plant = Plant(
-        uuid,
-        temperature,
-        isRain,
-        moistureAir,
-        moistureSoil
-    )
-
-}

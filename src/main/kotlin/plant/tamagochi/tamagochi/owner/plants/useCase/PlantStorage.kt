@@ -1,6 +1,6 @@
 package plant.tamagochi.tamagochi.owner.plants.useCase
 
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.Plant
 import java.util.*
 
 interface PlantStorage {

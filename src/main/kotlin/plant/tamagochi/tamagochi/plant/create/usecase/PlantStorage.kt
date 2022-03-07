@@ -1,6 +1,6 @@
 package plant.tamagochi.tamagochi.plant.create.usecase
 
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.Plant
 
 interface PlantStorage {
 

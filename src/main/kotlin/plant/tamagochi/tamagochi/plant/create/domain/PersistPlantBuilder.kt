@@ -1,6 +1,6 @@
 package plant.tamagochi.tamagochi.plant.create.domain
 
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.BuilderPlant
 import java.util.*
 
 class PersistPlantBuilder(
@@ -9,16 +9,12 @@ class PersistPlantBuilder(
     isRain: Boolean,
     moistureAir: Int,
     moistureSoil: Int
-) {
-
-    val plant: Plant = Plant(
-        uuid,
-        temperature,
-        isRain,
-        moistureAir,
-        moistureSoil
-    )
-
-}
+): BuilderPlant(
+    uuid,
+    temperature,
+    isRain,
+    moistureAir,
+    moistureSoil
+)
 
 

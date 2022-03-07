@@ -1,6 +1,6 @@
 package plant.tamagochi.tamagochi.infrastructure.mysql.plant
 
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.Plant
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter

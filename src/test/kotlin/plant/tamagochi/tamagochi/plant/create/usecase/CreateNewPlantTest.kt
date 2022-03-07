@@ -2,7 +2,7 @@ package plant.tamagochi.tamagochi.plant.create.usecase
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.Plant
 import plant.tamagochi.tamagochi.plant.create.domain.PersistPlantBuilder
 import plant.tamagochi.tamagochi.plant.create.gateway.InformationInputDataProvider
 import java.util.*

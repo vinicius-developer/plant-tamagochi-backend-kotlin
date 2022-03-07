@@ -1,4 +1,4 @@
-package plant.tamagochi.tamagochi.domain
+package plant.tamagochi.tamagochi.domain.plant
 
 import java.util.UUID
 

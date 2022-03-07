@@ -2,7 +2,7 @@ package plant.tamagochi.tamagochi.owner.plants.infrastructre.database
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import plant.tamagochi.tamagochi.domain.Plant
+import plant.tamagochi.tamagochi.domain.plant.Plant
 import plant.tamagochi.tamagochi.infrastructure.mysql.plant.PlantEntity
 import plant.tamagochi.tamagochi.infrastructure.mysql.plant.PlantEntityRepository
 import plant.tamagochi.tamagochi.owner.plants.domain.OwnerPlantBuilder
